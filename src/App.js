@@ -46,7 +46,7 @@ function Home() {
 
   return (
     <div className='home'>
-      <h1>Welcome to PeekAbus!</h1>
+      <h1>Welcome to peekAbus!</h1>
       <div className='countdown'>
         <p>Busses moving in: {countdown}s</p>
       </div>
