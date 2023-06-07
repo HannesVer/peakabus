@@ -9,7 +9,7 @@ function Home() {
 
   const initialCaptions = Array(9).fill().map(() => randomLocation());
   const [captions, setCaptions] = useState(initialCaptions);
-  const [countdown, setCountdown] = useState(10);
+  const [countdown, setCountdown] = useState(3);
 
   function randomLocation() {
     const index = Math.floor(Math.random() * locations.length);
@@ -19,18 +19,19 @@ function Home() {
   useEffect(() => {
     const timer = setInterval(() => {
       setCaptions(captions.map(() => randomLocation()));
-      setCountdown(10);
-    }, 10000);
+      setCountdown(3); // Set the initial countdown to 3 seconds
+    }, 3000); // Changes location every 3 seconds
 
     const countdownTimer = setInterval(() => {
       setCountdown((count) => count - 1);
-    }, 1000);
+    }, 1000); // Decreases countdown every second
 
     return () => {
       clearInterval(timer);
       clearInterval(countdownTimer);
     };
   }, [captions]);
+
 
   const tiles = imageNames.map((imageName, i) => {
     const imgUrl = process.env.PUBLIC_URL + `/${imageName}.png`;  // Path to the image
