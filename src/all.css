@@ -1,0 +1,65 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.tile {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 200px;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.2s;
+}
+
+.tile:hover {
+  transform: scale(1.05);
+}
+
+.tile-content {
+  position: absolute;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+.caption {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+
+h1 {
+  color: #333;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.countdown {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  background-color: #ff5a5f; /* Airbnb-like pink color */
+  color: white; 
+  border-radius: 5px; 
+  font-weight: bold;
+}
