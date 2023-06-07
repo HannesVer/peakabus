@@ -9,7 +9,7 @@ function Home() {
 
   const initialCaptions = Array(9).fill().map(() => randomLocation());
   const [captions, setCaptions] = useState(initialCaptions);
-  const [countdown, setCountdown] = useState(10);
+  const [countdown, setCountdown] = useState(3);
 
   function randomLocation() {
     const index = Math.floor(Math.random() * locations.length);
@@ -19,7 +19,7 @@ function Home() {
   useEffect(() => {
     const timer = setInterval(() => {
       setCaptions(captions.map(() => randomLocation()));
-      setCountdown(5);
+      setCountdown(3);
     }, 10000);
 
     const countdownTimer = setInterval(() => {
