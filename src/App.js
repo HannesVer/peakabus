@@ -19,7 +19,7 @@ function Home() {
   useEffect(() => {
     const timer = setInterval(() => {
       setCaptions(captions.map(() => randomLocation()));
-      setCountdown(10);
+      setCountdown(5);
     }, 10000);
 
     const countdownTimer = setInterval(() => {
